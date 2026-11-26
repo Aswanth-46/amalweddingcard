@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FBF8F3;
+    color: #2A2118;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+.luxury-silk-pattern {
+  background-image: radial-gradient(rgba(181, 137, 56, 0.1) 1px, transparent 0);
+  background-size: 30px 30px;
+}
+
+.text-gold-foil {
+  background: linear-gradient(135deg, #8A6420 0%, #CFA44F 48%, #8E6823 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mask-reveal {
+  overflow: hidden;
+  display: block;
+}
+
+.tabular-clock {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+.btn-luxury-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #B58938 0%, #E7CA88 50%, #B58938 100%);
+  background-size: 200% auto;
+  color: #231A10;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.95rem 1.85rem;
+  box-shadow: 0 12px 28px -10px rgba(181, 137, 56, 0.5);
+  transition: background-position 350ms ease, transform 250ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 250ms ease;
+}
+
+.btn-luxury-gold:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px -10px rgba(181, 137, 56, 0.65);
+}
+
+.btn-luxury-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  border-radius: 9999px;
+  background-color: #FFFDF9;
+  color: #2A2118;
+  border: 1px solid rgba(181, 137, 56, 0.55);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.95rem 1.75rem;
+  box-shadow: 0 8px 20px -14px rgba(42, 33, 24, 0.25);
+  transition: background-color 220ms ease, border-color 220ms ease, transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-luxury-outline:hover {
+  background-color: #F4EBDC;
+  border-color: #B58938;
+  transform: translateY(-2px);
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}
